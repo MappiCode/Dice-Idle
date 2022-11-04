@@ -23,8 +23,13 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
-    public static void UpdatePoints(int points)
+    void Update()
     {
-        pointsValueTMP.text = points.ToString();
+        UpdatePoints();
+    }
+
+    public static void UpdatePoints()
+    {
+        pointsValueTMP.text = Points_Manager.points.ToString();
     }
 }

@@ -1102,8 +1102,8 @@ GameObject:
   - component: {fileID: 753027445}
   - component: {fileID: 753027444}
   m_Layer: 5
-  m_Name: Ponts Value
-  m_TagString: Untagged
+  m_Name: Points Value
+  m_TagString: Value Label
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,6 +1551,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553502467}
+  - component: {fileID: 1553502468}
+  - component: {fileID: 1553502469}
   m_Layer: 0
   m_Name: Manager and Controller
   m_TagString: GameController
@@ -1573,6 +1575,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1553502468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553502465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb0ee66af7f7394cb6b4a6396cd4338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1831861908}
+--- !u!114 &1553502469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553502465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf90a706ab683c945a48b548c3900606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603375931
 GameObject:
   m_ObjectHideFlags: 0
