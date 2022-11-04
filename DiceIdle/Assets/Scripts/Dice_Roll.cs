@@ -19,5 +19,7 @@ public class Dice_Roll : MonoBehaviour
         rb.velocity = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
         rb.AddTorque(rb.velocity*20);
         //rb.AddTorque(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
+
+        UI_Controller.UpdatePoints(Random.Range(1, 6));
     }
 }
