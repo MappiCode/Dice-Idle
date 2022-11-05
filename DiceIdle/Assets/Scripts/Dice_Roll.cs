@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dice_Roll : MonoBehaviour
 {
     private Rigidbody rb;
-    private bool isMoving;
+    private bool isRolling;
 
     void Start()
     {
@@ -15,23 +15,23 @@ public class Dice_Roll : MonoBehaviour
 
     void Update()
     {
-        if (isMoving && rb.velocity.magnitude == 0)
+        if (isRolling && rb.velocity.magnitude == 0)
         {
-            Points_Manager.addPoints(CheckValue());
-            isMoving = false;
+            Points_Manager.AddPoints(CheckValue());
+            isRolling = false;
         }
     }
 
     void OnMouseDown(){
         // no action if dice is still rolling
-        if (isMoving)
+        if (isRolling)
             return;
 
         transform.position = new Vector3(0, 3, 0);
         transform.rotation = Quaternion.identity;
         rb.velocity = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
         rb.AddTorque(rb.velocity*20);
-        isMoving = true;
+        isRolling = true;
         //rb.AddTorque(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
     }
 
