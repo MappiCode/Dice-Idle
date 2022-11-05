@@ -29,11 +29,15 @@ public class Upgrades_Manager : MonoBehaviour
     public static double GetRollMultiplier()
     {
         double tmp = 1;
-        foreach (Upgrade upgrade in upgradeList)
+        foreach (RollMultiplierUpgrade upgrade in upgradeList.Where(up => up.GetType() == typeof(RollMultiplierUpgrade)))
         {
-            if (upgrade.count == 0)
-                continue;
-            tmp *= upgrade.effectRollMultiplier * upgrade.count;
+            //if (upgrade.GetType() == typeof(RollMultiplierUpgrade))
+            //{
+                RollMultiplierUpgrade rmUp = upgrade as RollMultiplierUpgrade;
+                if (upgrade.count == 0)
+                    continue;
+                tmp *= rmUp.effectRollMultiplier * upgrade.count;
+            //}
         }
 
         return tmp;
